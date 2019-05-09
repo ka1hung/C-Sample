@@ -11,15 +11,15 @@ namespace DapperSample
         static void Main(string[] args)
         {
             //1. create mssql connection object (ip,database,user,password)
-            MemberSQL sql = new MemberSQL("192.168.3.195", "mydb", "sa", "leegood");
+            MemberSQL sql = new MemberSQL("localhost", "mydb", "user", "password");
 
             //2. create MemberInfo Table
             sql.CreateMemberInfo();
 
             //3. insert data to MemberInfo Table
             MemberInfo mi = new MemberInfo();
-            mi.Email = "leegood@gmail.com";
-            mi.Name = "leegood";
+            mi.Email = "abc@gmail.com";
+            mi.Name = "abc";
             mi.LineID = "ouyr2345jhxcvncc";
             mi.Valid = "not yet";
             mi.AuthTime = DateTime.Now;
